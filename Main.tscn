@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dtyah8ytvgoyj"]
+
+[ext_resource type="Script" uid="uid://dfcutyy7ulxfy" path="res://level_container.gd" id="3_cm0pq"]
+[ext_resource type="Script" uid="uid://beux0bp16afo0" path="res://background_holder.gd" id="5_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://da2eqomo5e2ho" path="res://Scenes/game_UI.tscn" id="6_3dxm6"]
+
+[node name="Main" type="Node" unique_id=222071494]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1898969173]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1668505005]
+disable_3d = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="SubViewportContainer/SubViewport" unique_id=857065463]
+layer = -1
+
+[node name="background_holder" type="Node2D" parent="SubViewportContainer/SubViewport/ParallaxBackground" unique_id=1151817969]
+script = ExtResource("5_3dxm6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer/SubViewport" unique_id=1119103704]
+
+[node name="game_UI" parent="SubViewportContainer/SubViewport/CanvasLayer" unique_id=2012760361 instance=ExtResource("6_3dxm6")]
+
+[node name="level_container" type="Node2D" parent="SubViewportContainer/SubViewport" unique_id=1092160654]
+script = ExtResource("3_cm0pq")

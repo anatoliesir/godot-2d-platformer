@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://da2eqomo5e2ho"]
+
+[ext_resource type="Texture2D" uid="uid://biwwfax7fnvuj" path="res://Resources/Menu/Buttons/Restart.png" id="1_iib37"]
+[ext_resource type="Script" uid="uid://cccal38pdk8q7" path="res://Scenes/game_ui.gd" id="1_ybgp4"]
+[ext_resource type="Texture2D" uid="uid://chsikj1e8brw" path="res://Resources/Menu/Buttons/Previous.png" id="2_fpypv"]
+[ext_resource type="Texture2D" uid="uid://br6wsq6cdiqwr" path="res://Resources/Menu/Buttons/Next.png" id="2_wsktf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0kwsx"]
+texture = ExtResource("2_fpypv")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5j8w"]
+texture = ExtResource("2_fpypv")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+region_rect = Rect2(0, -0.7977109, 21, 21.338829)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxnb3"]
+texture = ExtResource("2_fpypv")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+region_rect = Rect2(0, 1.1059847, 21, 22.372543)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8if36"]
+texture = ExtResource("2_wsktf")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufsxg"]
+texture = ExtResource("2_wsktf")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+region_rect = Rect2(0, -0.7977109, 21, 21.338829)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r5hx"]
+texture = ExtResource("2_wsktf")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+region_rect = Rect2(0, 1.1059847, 21, 22.372543)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ybgp4"]
+texture = ExtResource("1_iib37")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsktf"]
+texture = ExtResource("1_iib37")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+region_rect = Rect2(0, -0.7977109, 21, 21.338829)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpypv"]
+texture = ExtResource("1_iib37")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+region_rect = Rect2(0, 1.1059847, 21, 22.372543)
+
+[node name="game_UI" type="Control" unique_id=2012760361]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybgp4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1771209034]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 25.0
+grow_horizontal = 0
+
+[node name="Previous" type="Button" parent="HBoxContainer" unique_id=1668274192]
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0kwsx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h5j8w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jxnb3")
+
+[node name="Next" type="Button" parent="HBoxContainer" unique_id=256990856]
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8if36")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ufsxg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2r5hx")
+
+[node name="Reload" type="Button" parent="HBoxContainer" unique_id=505790144]
+layout_mode = 2
+size_flags_horizontal = 10
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ybgp4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wsktf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fpypv")
+
+[connection signal="pressed" from="HBoxContainer/Previous" to="." method="_on_previous_pressed"]
+[connection signal="pressed" from="HBoxContainer/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="HBoxContainer/Reload" to="." method="_on_reload_pressed"]

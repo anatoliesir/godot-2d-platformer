@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://cbg6rknbmlcip"]
+
+[ext_resource type="Texture2D" uid="uid://hb875lpharsu" path="res://Resources/Background/Blue.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://boqn7tir8kv27" path="res://Scenes/main_menu.gd" id="1_48xlc"]
+[ext_resource type="FontFile" uid="uid://71vye131cabg" path="res://dbyte_1x.png" id="3_1ehe0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48xlc"]
+texture = ExtResource("1_28flt")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0.2498506, 0.24985078, 0.24985075, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.21568628)
+shadow_size = 3
+shadow_offset = Vector2(0, 2.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.47553682, 0.47553688, 0.47553682, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.21568628)
+shadow_size = 3
+shadow_offset = Vector2(0, 2.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.76156104, 0.76156086, 0.761561, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.21568628)
+shadow_size = 3
+shadow_offset = Vector2(0, 2.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28flt"]
+
+[node name="MainMenu" type="Control" unique_id=278970155]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0125165)
+script = ExtResource("1_48xlc")
+
+[node name="Panel" type="Panel" parent="." unique_id=1451030449]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_48xlc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2145452603]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = -95.969666
+offset_right = 174.0
+offset_bottom = 64.68445
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1837665137]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28flt")
+text = "PLAY"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=337078264]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28flt")
+text = "OPTIONS"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1905478085]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28flt")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="." unique_id=401471595]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 421.0
+offset_top = 98.113525
+offset_right = -427.0
+offset_bottom = 165.92322
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.6309911, 0.874973, 1)
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 32
+text = "Triple AAA Game is
+  in development"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
