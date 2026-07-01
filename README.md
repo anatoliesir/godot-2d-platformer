@@ -7,7 +7,7 @@ https://anatoliesir.itch.io/godot-2d-platformer
 Controls:\
 A - left\
 D - right\
-Space - jump\
+Space - jump
 
 The assets used in this game are not mine.
 
